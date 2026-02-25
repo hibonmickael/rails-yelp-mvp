@@ -1,0 +1,13 @@
+
+<div class="d-flex justify-content-between align-items-center">
+  <h1>Add a restaurant</h1>
+</div>
+<br>
+<div class="row g-0">
+  <div class="p-3 border bg-light">
+    <%= render "restaurants/form", restaurant: @restaurant %>
+  </div>
+</div>
+
+
+<%= link_to restaurants_path, "class" => "btn btn-secondary mt-3" do %><i class="fa-solid fa-chevron-left"></i>  Back<% end %>

@@ -1,0 +1,19 @@
+
+<div class="d-flex justify-content-between align-items-center">
+  <h1>All Restaurants</h1>
+  <%= link_to new_restaurant_path(@restaurant), class:"btn btn-primary", style: "height: max-content" do %><i class="fa-regular fa-plus"></i> Add restaurant<% end %>
+</div>
+<br>
+<div class="row g-3">
+  <% @restaurants.each do |restaurant| %>
+    <%= link_to restaurant_path(restaurant), class:"col-4" do %>
+        <div class="p-3 border bg-light">
+          <h2><%= restaurant.name %></h2>
+          <p><strong>Type :</strong> <%= restaurant.category %></p>
+          <p><strong>Address :</strong> <%= restaurant.address %></p>
+          <p><strong>Phone :</strong> <%= restaurant.phone_number %></p>
+          <p><strong>Reviews :</strong> <%= restaurant.reviews.count %></p>
+        </div>
+    <% end %>
+  <% end %>
+</div>
